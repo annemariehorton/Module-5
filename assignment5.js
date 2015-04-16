@@ -81,10 +81,9 @@ function GenerateHistory(order)
  var ordercount = 0;
  var displayhistory = "<table><tr><th>Product Name</th><th>Quantity Ordered</th></tr>";
 
- for (ordercount = 0; ordercount < order.getCustomerOrderHistory.length; ordercount++)
+ for (ordercount = 0; ordercount < order.length; ordercount++)
  {
- displayhistory += "<tr><td>" + order.getCustomerOrderHistory[ordercount].ProductName + "</td><td>" +
- order.getCustomerOrderHistory[ordercount].Total + "</td></tr>";
+ displayhistory += "<tr><td>" + order[ordercount].ProductName + "</td><td>" + order[ordercount].Total + "</td></tr>";
  }
     
  displayhistory += "</table>";
